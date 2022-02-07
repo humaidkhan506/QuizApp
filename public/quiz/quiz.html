@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="quiz.css">
+    <title>Questions page</title>
+</head>
+
+<body onload="show_question(0), start()"></body>
+
+<div class="main">
+    <h1 class="h1 py-3 text-primary  ">Javascript Quiz</h1>
+    <div class="container">
+        <div class="main2">
+            <div class=" heading">
+                <h3 class="text-primary">Total Time: 2 min</h3>
+                <h3 class="text-primary">No. of Questions: 05</h3>
+            </div>
+        </div>
+        <div>
+            <h2 id="question"></h2>
+
+            <div class="optiondiv">
+                <input type="radio" class="btn-check" name="opt" value="opt1" name="options-outlined" id="opt1"
+                    autocomplete="off" checked>
+                <label class="btn btn-outline-primary opt" for="opt1"></label>
+
+                <input type="radio" class="btn-check" name="opt" value="opt2" name="options-outlined" id="opt2"
+                    autocomplete="off" checked>
+                <label class="btn btn-outline-primary opt" for="opt2"></label>
+
+                <input type="radio" class="btn-check" name="opt" value="opt3" name="options-outlined" id="opt3"
+                    autocomplete="off" checked>
+                <label class="btn btn-outline-primary opt" for="opt3"></label>
+
+                <input type="radio" class="btn-check" name="opt" value="opt4" name="options-outlined" id="opt4"
+                    autocomplete="off">
+                <label class="btn btn-outline-primary opt" for="opt4"></label>
+            </div>
+            <button class="btn btn-primary mt-3" id="next_btn" onclick="next_question()" type="button">Next
+                Question</button>
+
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- Optional JavaScript; choose one of the two! -->
+
+<!-- Option 1: Bootstrap Bundle with Popper -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p"
+    crossorigin="anonymous"></script>
+
+<!-- Option 2: Separate Popper and Bootstrap JS -->
+<!--
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.10.2/dist/umd/popper.min.js" integrity="sha384-7+zCNj/IqJ95wo16oMtfsKbZ9ccEh31eOz1HGyDuCQ6wgnyJNSYdrPa03rtR1zdB" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.min.js" integrity="sha384-QJHtvGhmr9XOIpI6YVutG+2QOK9T+ZnN4kzFN1RtK3zEFEIsxhlmWl5/YESvpZ13" crossorigin="anonymous"></script>
+    -->
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-auth.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.9.1/firebase-database.js"></script>
+<script>
+    var firebaseConfig = {
+        apiKey: "AIzaSyA70OkAHoX9wqzAX08RZhtyKQ39kLXAbuk",
+        authDomain: "quizapp-firebase-f7d58.firebaseapp.com",
+        projectId: "quizapp-firebase-f7d58",
+        storageBucket: "quizapp-firebase-f7d58.appspot.com",
+        messagingSenderId: "246732826962",
+        appId: "1:246732826962:web:d71821afe58f633c78328b",
+        measurementId: "G-L6QZHK18RH"
+    };
+    firebase.initializeApp(firebaseConfig);
+</script>
+<script src="quiz.js"></script>
+</body>
+
+</html>

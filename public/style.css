@@ -1,0 +1,43 @@
+body {
+  margin: 0px;
+  text-align: center;
+}
+.mianHeadingdiv {
+  display: flex;
+  justify-content: center;
+}
+.headingdiv {
+  width: 50%;
+}
+h1 {
+  margin-top: 100px;
+  border-bottom: 2px solid blue;
+}
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-top: 150px;
+  width: 30%;
+  border: 1px solid blue;
+  border-radius: 10px;
+}
+.main > button {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+input {
+  font-size: 1em;
+  width: 300px;
+  height: 30px;
+  border: none;
+  outline: none;
+}
+a {
+  text-decoration: none;
+  color: blue;
+}
+.maindiv {
+  display: flex;
+  justify-content: center;
+}
